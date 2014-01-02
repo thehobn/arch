@@ -34,19 +34,34 @@ passwd
 pacman -S grub efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch_grub --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
+cp /boot/grub/grub.cfg.new /boot/grub/grub.cfg
 
 # Add user
 useradd -m -g users -G wheel min
+passwd min
 
 # Install additional utilites
-pacman -S dialog wpa_supplicant wpa_actiond iw  #network
+pacman -S dialog wpa_supplicant #wpa_actiond iw  #network
 pacman -S xorg-server xorg-server-utils xorg-xinit xterm #X
 pacman -S xf86-video-vesa xf86-video-ati xf86-video-intel #display
-pacman -S xf86-input-synaptics awesome alsa-utils mesa  #misc
-pacman -S transmission-gtk vlc gimp libreoffice git
+pacman -S xf86-input-synaptics awesome alsa-utils mesa sudo #misc
+pacman -S transmission-gtk vlc gimp libreoffice git thunar
 # From AUR: iron-git (libpdf, pepper)
+
+# Add vgaswitcheroo
+echo none            /sys/kernel/debug debugfs defaults 0 0 >> /etc/fstab
+# To shutdown discrete GPU automatically: open /etc/mkinitcpio.conf and add MODULES="radeon i915" to the MODULES line and do below
+mkinitcpio -p linux
+echo w /sys/kernel/debug/vgaswitcheroo/switch - - - - OFF > /etc/tmpfiles.d/vgaswitcheroo.conf
+
 
 # Reboot sequence
 exit
 umount -R /mnt
 reboot
+
+# After reboot:
+# Log in as user
+# echo exec awesome > ~/.xinitrc
+# Add sudo privileges
+# EDITOR=nano visudo
