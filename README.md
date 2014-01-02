@@ -17,5 +17,5 @@ Graphical utilities
 
 DONE:
 Boot Arch (format EFI partition as VFAT instead of FAT32)
-Fix grub.cfg (copy actual file to replace placeholder???)
+Fix grub.cfg (manually replace .cfg with .cfg.new file)
 Run X as non-root user (copy /root/.xinitrc file to /home/$USER)
