@@ -43,6 +43,8 @@ pacman -S dialog wpa_supplicant wpa_actiond iw  #network
 pacman -S xorg-server xorg-server-utils xorg-xinit xterm #X
 pacman -S xf86-video-vesa xf86-video-ati xf86-video-intel #display
 pacman -S xf86-input-synaptics awesome alsa-utils mesa  #misc
+pacman -S transmission-gtk vlc gimp libreoffice git
+# From AUR: iron-git (libpdf, pepper)
 
 # Reboot sequence
 exit
