@@ -12,6 +12,8 @@ Theme/config awesomewm
 Implement redshift
 Login manager/screen locker
 Clean under keyboard/touchpad
+Power dialog
+Graphical utilities
 
 DONE:
 Boot Arch (format EFI partition as VFAT instead of FAT32)
