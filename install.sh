@@ -65,3 +65,6 @@ reboot
 # echo exec awesome > ~/.xinitrc
 # Add sudo privileges
 # EDITOR=nano visudo
+# Add two-finger scrolling
+# nano /etc/X11/xorg.conf.d/50-synaptics.conf
+# Apply awesome theme
