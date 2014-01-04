@@ -49,8 +49,9 @@ pacman -S base-devel transmission-gtk vlc gimp libreoffice git thunar thunar-vol
 # From AUR: iron-git (libpdf, pepper)
 
 # Add vgaswitcheroo
-echo none            /sys/kernel/debug debugfs defaults 0 0 >> /etc/fstab #no worko
+echo none            /sys/kernel/debug debugfs defaults 0 0 >> /etc/fstab #worko???
 # To shutdown discrete GPU automatically: open /etc/mkinitcpio.conf and add MODULES="radeon i915" to the MODULES line and do below
+nano /etc/mkinitcpio.conf
 mkinitcpio -p linux
 echo w /sys/kernel/debug/vgaswitcheroo/switch - - - - OFF > /etc/tmpfiles.d/vgaswitcheroo.conf
 
