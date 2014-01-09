@@ -69,3 +69,16 @@ reboot
 # Add two-finger scrolling
 # nano /etc/X11/xorg.conf.d/50-synaptics.conf
 # Apply awesome theme
+# Fix Windows time sync issue
+# Fix full power fan after resume:
+sudo nano /usr/lib/systemd/system-sleep/radeon.sh
+Write below:
+#!/bin/bash
+case $1/$2 in
+  pre/*)
+    echo ON > /sys/kernel/debug/vgaswitcheroo/switch
+    ;;
+  post/*)
+    echo OFF > /sys/kernel/debug/vgaswitcheroo/switch
+    ;;                                                                       
+esac
