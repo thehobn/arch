@@ -82,3 +82,6 @@ case $1/$2 in
     echo OFF > /sys/kernel/debug/vgaswitcheroo/switch
     ;;                                                                       
 esac
+# Set executable and owned by root
+chmod 755 /usr/lib/systemd/system-sleep/radeon.sh
+chown root:root /usr/lib/systemd/system-sleep/radeon.sh
