@@ -34,7 +34,11 @@ passwd
 pacman -S grub efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch_grub --recheck
 grub-mkconfig -o /boot/grub/grub.cfg
-cp /boot/grub/grub.cfg.new /boot/grub/grub.cfg
+cp /boot/grub/grub.cfg.new /boot/grub/grub.cfg #no longer needed (?)
+#password protect?
+#shutdown and reboot entries?
+#theming?
+
 
 # Add user
 useradd -m -g users -G wheel min
@@ -71,7 +75,7 @@ reboot
 # Apply awesome theme
 # Fix Windows time sync issue
 # Fix full power fan after resume:
-sudo nano /usr/lib/systemd/system-sleep/radeon.sh
+sudo nano /usr/lib/systemd/system-sleep/radeon.sh #make file first
 Write below:
 #!/bin/bash
 case $1/$2 in
