@@ -13,6 +13,8 @@ Complete CLI/GUI environment
 
 IDEAS:
 Clean under keyboard/touchpad
+Integrate conky
+Find wallpaper
 
 DONE:
 Boot Arch (format EFI partition as VFAT instead of FAT32)
