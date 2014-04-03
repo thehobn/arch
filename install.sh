@@ -49,7 +49,7 @@ pacman -S dialog wpa_supplicant #wpa_actiond iw  #network
 pacman -S xorg-server xorg-server-utils xorg-xinit xterm #X
 pacman -S xf86-video-vesa xf86-video-ati xf86-video-intel #display
 pacman -S xf86-input-synaptics awesome alsa-utils mesa sudo #misc
-pacman -S unzip wget base-devel transmission-gtk vlc gimp libreoffice git audacity darktable
+pacman -S unzip wget base-devel transmission-gtk vlc gimp libreoffice git audacity darktable gvim conky dwarffortress rxvt-unicode zsh grml-zsh-config ntp acpi
 # From AUR: iron-git (libpdf, pepper)
 
 # Add vgaswitcheroo
@@ -89,3 +89,16 @@ esac
 # Set executable and owned by root
 chmod 755 /usr/lib/systemd/system-sleep/radeon.sh
 chown root:root /usr/lib/systemd/system-sleep/radeon.sh
+
+#Auto wifi connect
+
+chromium pepper libpdf rednotebook exfat tor
+
+#Password protect GRUB2 and BIOS
+
+#TODO: screen lock and conky
+#enable multilib /etc/pacman.conf
+
+#Fix time
+ntpd -qg
+hwclock --systohc
