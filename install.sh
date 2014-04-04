@@ -102,3 +102,18 @@ chromium pepper libpdf rednotebook exfat tor
 #Fix time
 ntpd -qg
 hwclock --systohc
+
+#completely power down discrete
+acpi-call-git
+modprobe acpi_call
+turn_off_gpu.sh
+Add the kernel module to the array of modules to load at boot:
+/etc/modules-load.d/acpi_call.conf
+#Load 'acpi_call.ko' at boot.
+
+acpi_call
+To turn off the GPU at boot we could just run the above script but honestly that is not very elegant so instead lets make use of systemd's tmpfiles.
+/etc/tmpfiles.d/acpi_call.conf
+
+w /proc/acpi/call - - - - \_SB.PCI0.PEG0.PEGP._OFF
+The above config will be loaded at boot by systemd. What it does is write the specific OFF signal to the /proc/acpi/call file. Obviously, replace the \_SB.PCI0.PEG0.PEGP._OFF with the one which works on your system.
