@@ -132,3 +132,23 @@ To turn off the GPU at boot we could just run the above script but honestly that
 
 w /proc/acpi/call - - - - \_SB.PCI0.PEG0.PEGP._OFF
 The above config will be loaded at boot by systemd. What it does is write the specific OFF signal to the /proc/acpi/call file. Obviously, replace the \_SB.PCI0.PEG0.PEGP._OFF with the one which works on your system.
+
+TODO:
+Wifi on resume/wifi-menu alternative
+Occasional "Operating system not found"
+Brightness widget/notification in awesomewm
+Theming awesomewm
+Battery drain in suspend
+Login manager/screen locker
+Complete CLI/GUI environment
+
+IDEAS:
+Clean under keyboard/touchpad
+Integrate conky
+Find wallpaper
+
+DONE:
+Boot Arch (format EFI partition as VFAT instead of FAT32)
+Fix grub.cfg (manually replace .cfg with .cfg.new file)
+Run X as non-root user (copy /root/.xinitrc file to /home/$USER)
+Hybrid graphics (turn off discrete at boot, back on before suspend/hibernate and back off on resume; see install.sh)
