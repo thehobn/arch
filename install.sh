@@ -7,8 +7,23 @@
 # Connect to internet (wifi-menu)
 # Make partitions and format (cgdisk, mkfs)
 # Mount partitions (mount)
-
-
+#pvcreate /dev/sdXn
+#pvdisplay
+#vgcreate $volumeGroupName $physicalVolumeName
+#vgextend $volumeGroupName $anotherPhysicalVolumeName
+#vgdisplay
+#lvcreate -l +100%FREE $volumeGroupName -n $logicalVolumeName
+#lvdisplay
+#modprobe dm-mod
+#vgscan
+#vgchange -ay
+#cryptsetup -y -v luksFormat /dev/mapper/sys-root
+#cryptsetup open /dev/mapper/sys-root root
+#mkfs.ext4 /dev/mapper/root
+#TO CLOSE: cryptsetup close root
+#mount -t ext4 /dev/mapper/root /mnt
+#add encrypt lvm2 before filesystems at HOOKS in /etc/mkinitcpio.conf then mkinitcpio -p linux
+nano /etc/default/grub #and edit GRUB_CMDLINE_LINUX= "cryptdevice=/dev/mapper/sys-root:root root=/dev/mapper/root"
 
 #Install base system and generate fstab, then chroot into install
 pacstrap /mnt base
