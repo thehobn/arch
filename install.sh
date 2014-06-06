@@ -154,13 +154,20 @@ Run X as non-root user (copy /root/.xinitrc file to /home/$USER)
 Hybrid graphics (turn off discrete at boot, back on before suspend/hibernate and back off on resume; see install.sh)
 
 WarGame
+Europa Universalis
+Crusader Kings
 Witcher
-STALKER
 Metro
-FTL
-Kentucky Route Zero
+Minecraft
 Kerbal Space Program
+FTL
+
+STALKER
+Fallout
+X3
+
 PS2
+
 
 Buffy
 Veronica Mars
