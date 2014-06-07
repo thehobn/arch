@@ -65,7 +65,8 @@ pacman -S xorg-server xorg-server-utils xorg-xinit xterm #X
 pacman -S xf86-video-vesa xf86-video-ati xf86-video-intel #display
 pacman -S xf86-input-synaptics awesome alsa-utils mesa sudo #misc
 pacman -S unzip wget base-devel transmission-gtk vlc gimp libreoffice git audacity darktable gvim conky dwarffortress rxvt-unicode zsh grml-zsh-config ntp acpi gptfdisk dosfstools
-# From AUR: iron-git (libpdf, pepper)
+pacman -S dwb w3m transmission-cli sup(-git) (instant messaging) (aggregator) (pastebin) (codecs?) jfbview xev? xorg-xwd mpd (mp3tag) audacity? vimpc/ncmpcpp vlc-nogui handbrake-cli util-linux gptfdisk parted coreutils ranger (p7zip/dar)? ntp conky alsi? (clipman) (keyboardlayout) pacmatic(etc?) vim python2-epub-git (firewall) (netsec) (autobackup) (screenlocker:slock/xscreensaver) (hash) (encrypt) (steno) (passman) (calc?) (bootsplash) (loginman/displayman) (todo/calendar) desmume dolphin pcsx2 wine
+# From AUR: iron-git (libpdf, pepper) 
 
 # Add vgaswitcheroo
 echo none            /sys/kernel/debug debugfs defaults 0 0 >> /etc/fstab #worko???
