@@ -60,21 +60,19 @@ useradd -m -g users -G wheel min
 passwd min
 
 # Install additional utilites
-pacman -S dialog wpa_supplicant #wpa_actiond iw  #network
-pacman -S xorg-server xorg-server-utils xorg-xinit xterm #X
-pacman -S xf86-video-vesa xf86-video-ati xf86-video-intel #display
-pacman -S xf86-input-synaptics awesome alsa-utils mesa sudo #misc
-pacman -S unzip wget base-devel transmission-gtk vlc gimp libreoffice git audacity darktable gvim conky dwarffortress rxvt-unicode zsh grml-zsh-config ntp acpi gptfdisk dosfstools
-pacman -S dwb w3m transmission-cli sup(-git) (instant messaging) (aggregator) (pastebin) (codecs?) jfbview xev? xorg-xwd mpd (mp3tag) audacity? vimpc/ncmpcpp vlc-nogui handbrake-cli util-linux gptfdisk parted coreutils ranger (p7zip/dar)? ntp conky alsi? (clipman) (keyboardlayout) pacmatic(etc?) vim python2-epub-git (firewall) (netsec) (autobackup) (screenlocker:slock/xscreensaver) (hash) (encrypt) (steno) (passman) (calc?) (bootsplash) (loginman/displayman) (todo/calendar) desmume dolphin pcsx2 wine
-# From AUR: iron-git (libpdf, pepper) 
-
-# Add vgaswitcheroo
-echo none            /sys/kernel/debug debugfs defaults 0 0 >> /etc/fstab #worko???
-# To shutdown discrete GPU automatically: open /etc/mkinitcpio.conf and add MODULES="radeon i915" to the MODULES line and do below
-nano /etc/mkinitcpio.conf
-mkinitcpio -p linux
-echo w /sys/kernel/debug/vgaswitcheroo/switch - - - - OFF > /etc/tmpfiles.d/vgaswitcheroo.conf
-
+pacman -S dialog wpa_supplicant
+          xorg-server xorg-server-utils xorg-xinit
+          xf86-input-synaptics xf86-video-vesa xf86-video-intel xf86-video-ati
+          sudo base-devel unzip wget git ntp acpi gptfdisk dosfstools util-linux gptfdisk parted coreutils ranger
+          mesa alsa-utils awesome conky rxvt-unicode zsh grml-zsh-config
+          dwb w3m transmission-cli jfbview xorg-xwd mpd vimpc/ncmpcpp vlc-nogui handbrake-cli
+          dwarffortress wine pcsx2 desmume dolphin
+          gimp libreoffice audacity darktable gvim vim 
+#AUR: sup-git python2-epub-git exfat-git(?) rednotebook(?) tor(?)
+(instant messaging) (aggregator) (pastebin) (codecs?) (mp3tag) 
+(p7zip/dar)? alsi? (clipman) (keyboardlayout) pacmatic(etc?)  (firewall) (netsec) 
+(autobackup) (screenlocker:slock/xscreensaver) (hash) (encrypt) (steno) (passman) (calc?) (bootsplash) 
+(loginman/displayman) (todo/calendar) 
 
 # Reboot sequence
 exit
@@ -90,49 +88,14 @@ reboot
 # nano /etc/X11/xorg.conf.d/50-synaptics.conf
 # Apply awesome theme
 # Fix Windows time sync issue
-# Fix full power fan after resume:
-sudo nano /usr/lib/systemd/system-sleep/radeon.sh #make file first
-Write below:
-#!/bin/bash
-case $1/$2 in
-  pre/*)
-    echo ON > /sys/kernel/debug/vgaswitcheroo/switch
-    ;;
-  post/*)
-    echo OFF > /sys/kernel/debug/vgaswitcheroo/switch
-    ;;                                                                       
-esac
-# Set executable and owned by root
-chmod 755 /usr/lib/systemd/system-sleep/radeon.sh
-chown root:root /usr/lib/systemd/system-sleep/radeon.sh
-
 #Auto wifi connect
-
-chromium pepper libpdf rednotebook exfat tor
-
 #Password protect GRUB2 and BIOS
-
 #TODO: screen lock and conky
 #enable multilib /etc/pacman.conf
 
-#Fix time
-ntpd -qg
-hwclock --systohc
-
-#completely power down discrete
-acpi-call-git
-modprobe acpi_call
-turn_off_gpu.sh
-Add the kernel module to the array of modules to load at boot:
-/etc/modules-load.d/acpi_call.conf
-#Load 'acpi_call.ko' at boot.
-
-acpi_call
-To turn off the GPU at boot we could just run the above script but honestly that is not very elegant so instead lets make use of systemd's tmpfiles.
-/etc/tmpfiles.d/acpi_call.conf
-
-w /proc/acpi/call - - - - \_SB.PCI0.PEG0.PEGP._OFF
-The above config will be loaded at boot by systemd. What it does is write the specific OFF signal to the /proc/acpi/call file. Obviously, replace the \_SB.PCI0.PEG0.PEGP._OFF with the one which works on your system.
+#HYBRID GRAPHICS OMGWTFBBQ!?1!?!?!??!?!1/1/1?
+xrandr --listproviders
+xrandr --setprovideroffloadsink 0x55 0x7e
 
 TODO:
 Wifi on resume/wifi-menu alternative
