@@ -96,6 +96,7 @@ reboot
 #HYBRID GRAPHICS OMGWTFBBQ!?1!?!?!??!?!1/1/1?
 xrandr --listproviders
 xrandr --setprovideroffloadsink 0x55 0x7e
+#Rerun on X reboot
 
 TODO:
 Wifi on resume/wifi-menu alternative
