@@ -1,8 +1,3 @@
-#!/bin/bash
-#
-# Written by hobn, 2014
-#
-
 # DIY:
 # Connect to internet (wifi-menu)
 # Make partitions and format (cgdisk, mkfs)
@@ -65,14 +60,16 @@ pacman -S dialog wpa_supplicant
           xf86-input-synaptics xf86-video-vesa xf86-video-intel xf86-video-ati
           sudo base-devel unzip wget git ntp acpi gptfdisk dosfstools util-linux gptfdisk parted coreutils ranger
           mesa alsa-utils awesome conky rxvt-unicode zsh grml-zsh-config
-          dwb w3m transmission-cli jfbview xorg-xwd mpd vimpc/ncmpcpp vlc-nogui handbrake-cli
+          dwb w3m transmission-cli  xorg-xwd mpd vimpc/ncmpcpp handbrake-cli
           dwarffortress wine pcsx2 desmume dolphin
           gimp libreoffice audacity darktable gvim vim 
-#AUR: sup-git python2-epub-git exfat-git(?) rednotebook(?) tor(?)
+#AUR: sup-git python2-epub-git exfat-git(?) rednotebook(?) tor(?) jfbview vlc-nogui
 (instant messaging) (aggregator) (pastebin) (codecs?) (mp3tag) 
 (p7zip/dar)? alsi? (clipman) (keyboardlayout) pacmatic(etc?)  (firewall) (netsec) 
 (autobackup) (screenlocker:slock/xscreensaver) (hash) (encrypt) (steno) (passman) (calc?) (bootsplash) 
 (loginman/displayman) (todo/calendar) 
+
+#WTFNOTHINGSOWRSK
 
 # Reboot sequence
 exit
@@ -92,6 +89,9 @@ reboot
 #Password protect GRUB2 and BIOS
 #TODO: screen lock and conky
 #enable multilib /etc/pacman.conf
+#Userman
+#AUR helper
+#Disable boot message clearing
 
 #HYBRID GRAPHICS OMGWTFBBQ!?1!?!?!??!?!1/1/1?
 xrandr --listproviders
