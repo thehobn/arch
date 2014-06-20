@@ -98,6 +98,9 @@ xrandr --listproviders
 xrandr --setprovideroffloadsink 0x55 0x7e
 #Rerun on X reboot
 
+#lvmetad error fix:
+#change use_lvmetad = 1 to 0 in /etc/lvm/lvm.conf, install grub, change value back ?? PROFIT https://bbs.archlinux.org/viewtopic.php?id=169655
+
 TODO:
 Wifi on resume/wifi-menu alternative
 Occasional "Operating system not found"
