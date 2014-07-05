@@ -139,3 +139,6 @@ PS2
 
 Buffy
 Veronica Mars
+
+OpenGL direct render for Steam fix on desktop: remove libgcc/libstdc
+possible laptop fix? glamor from git
