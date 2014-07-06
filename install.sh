@@ -121,24 +121,12 @@ Fix grub.cfg (manually replace .cfg with .cfg.new file)
 Run X as non-root user (copy /root/.xinitrc file to /home/$USER)
 Hybrid graphics (turn off discrete at boot, back on before suspend/hibernate and back off on resume; see install.sh)
 
-WarGame
-Europa Universalis
-Crusader Kings
-Witcher
-Metro
-Minecraft
-Kerbal Space Program
-FTL
-
-STALKER
-Fallout
-X3
-
-PS2
-
-
-Buffy
-Veronica Mars
-
 OpenGL direct render for Steam fix on desktop: remove libgcc/libstdc
 possible laptop fix? glamor from git
+
+fix:
+media mounting and chmod and chown
+auto-wifi
+awesome & conky
+hybrid graphics
+steam shortcuts
