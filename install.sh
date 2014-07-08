@@ -142,3 +142,6 @@ Install glamor-egl-git from AUR
 
 Fix small text in Valve games:
 Install Verdana font?
+
+Dwarf Fortress fix:
+http://dwarffortresswiki.org/index.php/v0.34:Installation#.22Not_found:_.2Fdata.2Fart.2Fmouse.png.22_and_similar_errors
