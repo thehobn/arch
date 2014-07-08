@@ -130,3 +130,12 @@ auto-wifi
 awesome & conky
 hybrid graphics
 steam shortcuts
+
+
+ACTUAL HYBRID GRAPHICS SOLUTION!1!1!1!!!!!1!
+Downgrade to xf86-video-intel-2.21.15 using Arch Rollback Machine
+
+Possible other contributing factors:
+Use compton
+LD_PRELOAD libraries with Steam
+Install glamor-egl-git from AUR
