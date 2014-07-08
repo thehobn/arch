@@ -139,3 +139,6 @@ Possible other contributing factors:
 Use compton
 LD_PRELOAD libraries with Steam
 Install glamor-egl-git from AUR
+
+Fix small text in Valve games:
+Install Verdana font?
