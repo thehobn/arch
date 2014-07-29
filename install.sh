@@ -58,7 +58,7 @@ passwd min
 pacman -S dialog wpa_supplicant
           xorg-server xorg-server-utils xorg-xinit
           xf86-input-synaptics xf86-video-vesa xf86-video-intel xf86-video-ati
-          sudo base-devel unzip unrar 7z wget git ntp acpi gptfdisk dosfstools util-linux ntfs-3g parted coreutils ranger
+          sudo base-devel unzip unrar p7zip wget git ntp acpi gptfdisk dosfstools util-linux ntfs-3g parted coreutils ranger
           mesa alsa-utils awesome conky rxvt-unicode zsh grml-zsh-config
           dwb w3m transmission-cli  xorg-xwd mpd vimpc/ncmpcpp handbrake-cli
           dwarffortress wine pcsx2 desmume dolphin
