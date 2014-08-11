@@ -130,6 +130,8 @@ auto-wifi
 awesome & conky
 hybrid graphics
 steam shortcuts
+hibernate to swap
+login after suspend
 
 
 ACTUAL HYBRID GRAPHICS SOLUTION!1!1!1!!!!!1!
