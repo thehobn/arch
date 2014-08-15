@@ -147,3 +147,7 @@ Install Verdana font?
 
 Dwarf Fortress fix:
 http://dwarffortresswiki.org/index.php/v0.34:Installation#.22Not_found:_.2Fdata.2Fart.2Fmouse.png.22_and_similar_errors
+
+# systemctl enable netctl-auto@interface.service 
+# systemctl enable netctl-ifplugd@interface.service  
+# netctl enable $PROFILENAME (eg wlp2s0-NETGEAR)
