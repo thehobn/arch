@@ -151,3 +151,6 @@ http://dwarffortresswiki.org/index.php/v0.34:Installation#.22Not_found:_.2Fdata.
 # systemctl enable netctl-auto@interface.service 
 # systemctl enable netctl-ifplugd@interface.service  
 # netctl enable $PROFILENAME (eg wlp2s0-NETGEAR)
+ 
+ 
+ vimium
