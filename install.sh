@@ -18,6 +18,8 @@
 #TO CLOSE: cryptsetup close root
 #mount -t ext4 /dev/mapper/root /mnt
 #add encrypt lvm2 before filesystems at HOOKS in /etc/mkinitcpio.conf then mkinitcpio -p linux
+dd bs=512 count=4 if=/dev/urandom of=$watev iflag=fullblock
+cryptsetup lukAddKey /dv/$part /$keyfile
 nano /etc/default/grub #and edit GRUB_CMDLINE_LINUX= "cryptdevice=/dev/mapper/sys-root:root root=/dev/mapper/root"cryptkey=/dev/sdxx:filesys:/dir/to/file
 
 #Install base system and generate fstab, then chroot into install
