@@ -34,6 +34,9 @@ locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 export LANG=en_US.UTF-8
 
+nano /etc/vconsole.conf
+#FONT=lat9w-16
+
 # Set timezone
 ln -s /usr/share/zoneinfo/US/Pacific /etc/localtime
 hwclock --systohc --utc
