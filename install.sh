@@ -68,7 +68,7 @@ pacman -S dialog wpa_supplicant
           dwb w3m transmission-cli  xorg-xwd mpd vimpc/ncmpcpp handbrake-cli
           dwarffortress wine pcsx2 desmume dolphin
           gimp libreoffice audacity darktable gvim vim 
-          chromium libreoffice
+          chromium libreoffice vlc
 #AUR: sup-git python2-epub-git exfat-git(?) rednotebook(?) tor(?) jfbview vlc-nogui
 (instant messaging) (aggregator) (pastebin) (codecs?) (mp3tag) 
 (p7zip/dar)? alsi? (clipman) (keyboardlayout) pacmatic(etc?)  (firewall) (netsec) 
