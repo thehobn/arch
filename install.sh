@@ -56,16 +56,18 @@ echo Include = /etc/pacman.d/mirrorlist >> /etc/pacman.conf
 
 # Install additional utilites
 pacman -S dialog wpa_supplicant 
-          xorg-server xorg-server-utils xorg-xinit 
+          xorg-server xorg-server-utils xorg-xinit xorg-utils xorg-xkbcomp
           xf86-input-synaptics xf86-video-vesa xf86-video-intel xf86-video-ati mesa alsa-utils 
           acpi sudo base-devel multilib-devel wget git ntp rsync 
           unzip unrar p7zip gptfdisk dosfstools util-linux exfat-utils ntfs-3g parted coreutils 
-          zsh grml-zsh-config 
-          gvim vim slock surf ranger
+          zsh grml-zsh-config zsh-completions 
+          gvim vim slock surf ranger 
           mpd ncmpcpp 
           steam wine 
           vlc libreoffice gimp darktable audacity 
-          #AUR: dwm st-git-zsh tor-browser-en google-chrome-unstable cower
+          gcc gdb
+          #AUR: dwm st-git-zsh tor-browser-en google-chrome-unstable cower mars-mips gtk-evemon-git pyfa
+          #Elsewhere: evernus
 #AUR: sup-git python2-epub-git exfat-git(?) rednotebook(?) tor(?) jfbview vlc-nogui
 (instant messaging) (aggregator) (pastebin) (codecs?) (mp3tag) 
 (p7zip/dar)? alsi? (clipman) (keyboardlayout) pacmatic(etc?)  (firewall) (netsec) 
