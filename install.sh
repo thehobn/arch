@@ -22,27 +22,19 @@ dd bs=512 count=4 if=/dev/urandom of=$watev iflag=fullblock
 cryptsetup lukAddKey /dv/$part /$keyfile
 nano /etc/default/grub #and edit GRUB_CMDLINE_LINUX= "cryptdevice=/dev/mapper/sys-root:root root=/dev/mapper/root"cryptkey=/dev/sdxx:filesys:/dir/to/file
 
-#Install base system and generate fstab, then chroot into install
 pacstrap /mnt base
 genfstab -U -p /mnt >> /mnt/etc/fstab 
 arch-chroot /mnt
-
-
-# Config locale
 echo en_US.UTF-8 UTF-8 >> /etc/locale.gen
 locale-gen
 echo LANG=en_US.UTF-8 > /etc/locale.conf
 export LANG=en_US.UTF-8
-
-nano /etc/vconsole.conf
-#FONT=lat9w-16
-
-# Set timezone
+echo FONT=lat9w-16 > /etc/vconsole.conf
 ln -s /usr/share/zoneinfo/US/Pacific /etc/localtime
 hwclock --systohc --utc
-
-# Set hostname and root password
 echo hobn > /etc/hostname
+useradd -m -g users -G wheel min
+passwd min
 passwd
 
 # Install bootloader
@@ -54,21 +46,20 @@ cp /boot/grub/grub.cfg.new /boot/grub/grub.cfg #no longer needed (?)
 #shutdown and reboot entries?
 #theming?
 
-
-# Add user
-useradd -m -g users -G wheel min
-passwd min
+#HDD copy key to /etc/hdd first
+echo hdd UUID=b51367ae-b23d-4999-9d7d-dcf1b0456c21 /etc/hdd luks >> /etc/crypttab
+echo /dev/mapper/hdd /mnt ext4 defaults,errors=remount-ro 0 2
 
 # Install additional utilites
 pacman -S dialog wpa_supplicant
           xorg-server xorg-server-utils xorg-xinit
           xf86-input-synaptics xf86-video-vesa xf86-video-intel xf86-video-ati
           sudo base-devel unzip unrar p7zip wget git ntp acpi gptfdisk dosfstools util-linux exfat-utils ntfs-3g parted coreutils ranger rsync
-          mesa alsa-utils awesome conky rxvt-unicode zsh grml-zsh-config
-          dwb w3m transmission-cli  xorg-xwd mpd vimpc/ncmpcpp handbrake-cli
-          dwarffortress wine pcsx2 desmume dolphin
+          mesa alsa-utils rxvt-unicode zsh grml-zsh-config
+          mpd ncmpcpp wine
           gimp libreoffice audacity darktable gvim vim 
           chromium libreoffice vlc
+          #AUR: dwm st-git-zsh tor-browser-en google-chrome-unstable
 #AUR: sup-git python2-epub-git exfat-git(?) rednotebook(?) tor(?) jfbview vlc-nogui
 (instant messaging) (aggregator) (pastebin) (codecs?) (mp3tag) 
 (p7zip/dar)? alsi? (clipman) (keyboardlayout) pacmatic(etc?)  (firewall) (netsec) 
