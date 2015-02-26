@@ -50,16 +50,22 @@ cp /boot/grub/grub.cfg.new /boot/grub/grub.cfg #no longer needed (?)
 echo hdd UUID=b51367ae-b23d-4999-9d7d-dcf1b0456c21 /etc/hdd luks >> /etc/crypttab
 echo /dev/mapper/hdd /mnt ext4 defaults,errors=remount-ro 0 2
 
+#enable multilib for wine and probably steam
+echo [multilib] >> /etc/pacman.conf
+echo Include = /etc/pacman.d/mirrorlist >> /etc/pacman.conf
+
 # Install additional utilites
-pacman -S dialog wpa_supplicant
-          xorg-server xorg-server-utils xorg-xinit
-          xf86-input-synaptics xf86-video-vesa xf86-video-intel xf86-video-ati
-          sudo base-devel unzip unrar p7zip wget git ntp acpi gptfdisk dosfstools util-linux exfat-utils ntfs-3g parted coreutils ranger rsync
-          mesa alsa-utils rxvt-unicode zsh grml-zsh-config
-          mpd ncmpcpp wine
-          gimp libreoffice audacity darktable gvim vim 
-          chromium libreoffice vlc
-          #AUR: dwm st-git-zsh tor-browser-en google-chrome-unstable
+pacman -S dialog wpa_supplicant 
+          xorg-server xorg-server-utils xorg-xinit 
+          xf86-input-synaptics xf86-video-vesa xf86-video-intel xf86-video-ati mesa alsa-utils 
+          acpi sudo base-devel multilib-devel wget git ntp rsync 
+          unzip unrar p7zip gptfdisk dosfstools util-linux exfat-utils ntfs-3g parted coreutils 
+          zsh grml-zsh-config 
+          gvim vim slock surf ranger
+          mpd ncmpcpp 
+          steam wine 
+          vlc libreoffice gimp darktable audacity 
+          #AUR: dwm st-git-zsh tor-browser-en google-chrome-unstable cower
 #AUR: sup-git python2-epub-git exfat-git(?) rednotebook(?) tor(?) jfbview vlc-nogui
 (instant messaging) (aggregator) (pastebin) (codecs?) (mp3tag) 
 (p7zip/dar)? alsi? (clipman) (keyboardlayout) pacmatic(etc?)  (firewall) (netsec) 
@@ -75,9 +81,9 @@ reboot
 
 # After reboot:
 # Log in as user
-# echo exec awesome > ~/.xinitrc
+# echo exec dwm > ~/.xinitrc
 # Add sudo privileges
-# EDITOR=nano visudo
+# EDITOR=vim visudo
 # Add two-finger scrolling
 # nano /etc/X11/xorg.conf.d/50-synaptics.conf
 # Apply awesome theme
