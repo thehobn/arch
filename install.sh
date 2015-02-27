@@ -88,6 +88,7 @@ echo syntax enable > ~/.vimrc
 echo set nu > ~/.vimrc
 # mpd.conf and playlist/etc, enable mpd.service
 # etc/systemd/logind.conf
+# custom /usr/bin: steamd csgo eve eve-test update-eve update-eve-test evernus suspend
 # Add sudo privileges
 # EDITOR=vim visudo
 # Add two-finger scrolling
