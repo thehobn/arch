@@ -48,7 +48,7 @@ cp /boot/grub/grub.cfg.new /boot/grub/grub.cfg #no longer needed (?)
 
 #HDD copy key to /etc/hdd first
 echo hdd UUID=b51367ae-b23d-4999-9d7d-dcf1b0456c21 /etc/hdd luks >> /etc/crypttab
-echo /dev/mapper/hdd /mnt ext4 defaults,errors=remount-ro 0 2
+echo /dev/mapper/hdd-mnt /mnt ext4 defaults,errors=remount-ro 0 2
 
 #enable multilib for wine and probably steam
 echo [multilib] >> /etc/pacman.conf
