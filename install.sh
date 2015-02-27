@@ -83,7 +83,11 @@ reboot
 
 # After reboot:
 # Log in as user
-# echo exec dwm > ~/.xinitrc
+echo exec dwm > ~/.xinitrc
+echo syntax enable > ~/.vimrc
+echo set nu > ~/.vimrc
+# mpd.conf and playlist/etc, enable mpd.service
+# etc/systemd/logind.conf
 # Add sudo privileges
 # EDITOR=vim visudo
 # Add two-finger scrolling
