@@ -83,6 +83,7 @@ reboot
 
 # After reboot:
 # Log in as user
+# enable wpa_supplicant, dhcpcd
 echo exec dwm > ~/.xinitrc
 echo syntax enable > ~/.vimrc
 echo set nu > ~/.vimrc
