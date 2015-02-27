@@ -67,7 +67,7 @@ pacman -S dialog wpa_supplicant
           vlc libreoffice gimp darktable audacity 
           gcc gdb
           #AUR: dwm st-git-zsh tor-browser-en google-chrome-unstable cower mars-mips gtk-evemon-git pyfa
-          #Elsewhere: evernus
+          #Elsewhere: evernus (boost-libs libc++ libc++abi qt5-base qt5-multimedia qt5-script qt5-webkit)
 #AUR: sup-git python2-epub-git exfat-git(?) rednotebook(?) tor(?) jfbview vlc-nogui
 (instant messaging) (aggregator) (pastebin) (codecs?) (mp3tag) 
 (p7zip/dar)? alsi? (clipman) (keyboardlayout) pacmatic(etc?)  (firewall) (netsec) 
