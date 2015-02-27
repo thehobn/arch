@@ -86,6 +86,7 @@ reboot
 # enable wpa_supplicant, dhcpcd
 echo exec dwm > ~/.xinitrc
 echo set ttyscroll=0 > ~/.vimrc
+echo set guifont=liberationmono > ~/.vimrc
 echo syntax enable > ~/.vimrc
 echo set nu > ~/.vimrc
 # mpd.conf and playlist/etc, enable mpd.service
