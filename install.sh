@@ -55,7 +55,7 @@ echo [multilib] >> /etc/pacman.conf
 echo Include = /etc/pacman.d/mirrorlist >> /etc/pacman.conf
 
 # Install additional utilites
-pacman -S dialog wpa_supplicant 
+pacman -S dialog wpa_supplicant wireless_tools
           xorg-server xorg-server-utils xorg-xinit xorg-utils xorg-xkbcomp
           xf86-input-synaptics xf86-video-vesa xf86-video-intel xf86-video-ati mesa alsa-utils 
           acpi sudo base-devel multilib-devel wget git ntp rsync mlocate
