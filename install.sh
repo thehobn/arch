@@ -58,7 +58,7 @@ echo Include = /etc/pacman.d/mirrorlist >> /etc/pacman.conf
 pacman -S dialog wpa_supplicant 
           xorg-server xorg-server-utils xorg-xinit xorg-utils xorg-xkbcomp
           xf86-input-synaptics xf86-video-vesa xf86-video-intel xf86-video-ati mesa alsa-utils 
-          acpi sudo base-devel multilib-devel wget git ntp rsync 
+          acpi sudo base-devel multilib-devel wget git ntp rsync mlocate
           unzip unrar p7zip gptfdisk dosfstools util-linux exfat-utils ntfs-3g parted coreutils 
           zsh grml-zsh-config zsh-completions 
           gvim vim slock surf ranger 
