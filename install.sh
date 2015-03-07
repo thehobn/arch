@@ -63,7 +63,7 @@ pacman -S dialog wpa_supplicant wireless_tools
           zsh grml-zsh-config zsh-completions 
           gvim vim slock surf ranger 
           mpd ncmpcpp 
-          steam wine 
+          steam wine lib32-alsa-lib lib32-alsa-plugins
           vlc libreoffice gimp darktable audacity 
           gcc gdb
           #AUR: dwm st-git-zsh tor-browser-en google-chrome-unstable cower mars-mips gtk-evemon-git pyfa
