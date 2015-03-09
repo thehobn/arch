@@ -59,7 +59,7 @@ pacman -S dialog wpa_supplicant wireless_tools
           xorg-server xorg-server-utils xorg-xinit xorg-utils xorg-xkbcomp
           xf86-input-synaptics xf86-video-vesa xf86-video-intel xf86-video-ati mesa alsa-utils 
           acpi sudo base-devel multilib-devel wget git ntp rsync mlocate openssh
-          unzip unrar p7zip gptfdisk dosfstools util-linux exfat-utils ntfs-3g parted coreutils 
+          unzip unrar p7zip gptfdisk dosfstools util-linux exfat-utils ntfs-3g parted coreutils davfs2
           zsh grml-zsh-config zsh-completions 
           gvim vim slock surf ranger 
           mpd ncmpcpp 
