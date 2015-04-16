@@ -66,6 +66,18 @@ pacman -S dialog wpa_supplicant wireless_tools
           steam wine lib32-alsa-lib lib32-alsa-plugins
           vlc libreoffice gimp darktable audacity 
           gcc gdb
+          abs dmenu
+
+abs community/dwm
+cp -r /var/abs/community/dwm ~/dwm
+makepkg -i
+makepkg -efi --skipinteg //for recompiling with config.h modifications
+
+echo exec dwm > ~/.xinitrc //as user
+
+chsh -s /bin/zsh root
+chsh -s /bin/zsh min
+
           #AUR: dwm st-git-zsh tor-browser-en google-chrome-unstable cower mars-mips gtk-evemon-git pyfa
           #Elsewhere: evernus (boost-libs libc++ libc++abi qt5-base qt5-multimedia qt5-script qt5-webkit)
 #AUR: sup-git python2-epub-git exfat-git(?) rednotebook(?) tor(?) jfbview vlc-nogui
