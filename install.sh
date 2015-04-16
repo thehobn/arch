@@ -118,6 +118,8 @@ echo set nu > ~/.vimrc
 #AUR helper
 #Disable boot message clearing
 
+xsetroot -name //-cursor_name, background, etc
+
 #HYBRID GRAPHICS OMGWTFBBQ!?1!?!?!??!?!1/1/1?
 xrandr --listproviders
 xrandr --setprovideroffloadsink 0x55 0x7e
