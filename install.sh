@@ -78,7 +78,7 @@ echo exec dwm > ~/.xinitrc //as user
 chsh -s /bin/zsh root
 chsh -s /bin/zsh min
 
-          #AUR: dwm st-git-zsh tor-browser-en google-chrome-unstable cower mars-mips gtk-evemon-git pyfa
+          #AUR: dwm st-git-zsh tor-browser-en google-chrome-unstable cower mars-mips gtk-evemon-git pyfa yaourt
           #Elsewhere: evernus (boost-libs libc++ libc++abi qt5-base qt5-multimedia qt5-script qt5-webkit)
 #AUR: sup-git python2-epub-git exfat-git(?) rednotebook(?) tor(?) jfbview vlc-nogui
 (instant messaging) (aggregator) (pastebin) (codecs?) (mp3tag) 
