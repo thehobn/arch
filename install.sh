@@ -79,7 +79,7 @@ chsh -s /bin/zsh root
 chsh -s /bin/zsh min
 
           #AUR: dwm st-git-zsh tor-browser-en google-chrome-unstable cower mars-mips gtk-evemon-git pyfa yaourt ectool-svn
-          #Elsewhere: evernus (boost-libs libc++ libc++abi qt5-base qt5-multimedia qt5-script qt5-webkit)
+          #Elsewhere: evernus (boost-libs libc++ libc++abi qt5-base qt5-multimedia qt5-script qt5-webkit) rakyll/drive
 #AUR: sup-git python2-epub-git exfat-git(?) rednotebook(?) tor(?) jfbview vlc-nogui
 (instant messaging) (aggregator) (pastebin) (codecs?) (mp3tag) 
 (p7zip/dar)? alsi? (clipman) (keyboardlayout) pacmatic(etc?)  (firewall) (netsec) 
