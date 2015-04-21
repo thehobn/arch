@@ -102,7 +102,7 @@ echo set guifont=liberationmono > ~/.vimrc
 echo syntax enable > ~/.vimrc
 echo set nu > ~/.vimrc
 # mpd.conf and playlist/etc, enable mpd.service
-# etc/systemd/logind.conf
+# etc/systemd/logind.conf for lid/button behavior, NAutoVTs to 10 for more tty
 # custom /usr/bin: steamd csgo eve eve-test update-eve update-eve-test evernus suspend
 # Add sudo privileges
 # EDITOR=vim visudo
